@@ -1,7 +1,7 @@
-FROM golang:1.7.1-alpine
-MAINTAINER hteen <i@hteen.cn>
-
-RUN apk add --no-cache git make openssl
+#FROM golang:1.7.1-alpine
+#MAINTAINER hteen <i@hteen.cn>
+FROM ubuntu:16.04
+RUN apt-get update &&  apt-get -y  install golang git make openssl
 
 RUN git clone https://github.com/tutumcloud/ngrok.git /ngrok
 
